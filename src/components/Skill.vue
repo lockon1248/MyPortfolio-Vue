@@ -1,35 +1,38 @@
 <template>
-	<div class="flex gap-12 justify-evenly">
+	<div class="flex gap-12 justify-evenly pt-3">
 		<div>
-			<div>前端開發</div>
-			<div>
-				<div>html</div>
-				<div>html</div>
-				<div>html</div>
-				<div>html</div>
+			<div class="font-black my-3">使用者介面設計</div>
+			<div class="h-[200px] flex flex-col flex-wrap">
+				<div class="flex flex-col gap-2 m-2" v-for="item in uiData" :key="item">
+					<div class="flex items-center gap-2"><SvgIcon :icon="'check'" :size="20" />{{ item }}</div>
+				</div>
 			</div>
 		</div>
 		<div>
-			<div>使用者介面設計</div>
-			<div>
-				<div>html</div>
-				<div>html</div>
-				<div>html</div>
-				<div>html</div>
+			<div class="font-black my-3">前端開發</div>
+			<div class="h-[200px] flex flex-col flex-wrap">
+				<div class="flex flex-col gap-2 m-2" v-for="item in frontEndData" :key="item">
+					<div class="flex items-center gap-2"><SvgIcon :icon="'check'" :size="20" />{{ item }}</div>
+				</div>
 			</div>
 		</div>
 		<div>
-			<div>後端開發</div>
-			<div>
-				<div>html</div>
-				<div>html</div>
-				<div>html</div>
-				<div>html</div>
+			<div class="font-black my-3">後端開發</div>
+			<div class="h-[200px] flex flex-col flex-wrap">
+				<div class="flex flex-col gap-2 m-2" v-for="item in uiData" :key="item">
+					<div class="flex items-center gap-2"><SvgIcon :icon="'check'" :size="20" />{{ item }}</div>
+				</div>
 			</div>
 		</div>
 	</div>
 </template>
 
-<script lang="ts" setup></script>
+<script setup>
+import { ref } from 'vue';
+import SvgIcon from '@/components/SvgIcon.vue';
+const frontEndData = ref(['HTML', 'CSS, SCSS', 'JavaScript', 'Tailwind CSS', 'Github', 'RWD', 'Axios', 'Bootstrap 5', 'Vue 3']);
+const backEndData = ref(['MySQL', 'PHP']);
+const uiData = ref(['Figma', 'Wireframe', 'Prototype', 'Mockup']);
+</script>
 
 <style></style>

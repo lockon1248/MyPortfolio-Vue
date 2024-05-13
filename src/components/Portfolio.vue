@@ -41,6 +41,8 @@
 	</div>
 </template>
 
-<script setup></script>
+<script setup>
+import SvgIcon from '@/components/SvgIcon.vue';
+</script>
 
 <style></style>
