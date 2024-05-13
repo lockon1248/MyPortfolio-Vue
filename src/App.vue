@@ -3,7 +3,8 @@
 		<div class="w-[136px] m-auto">
 			<div class="m-auto rounded-full overflow-hidden p-1 border-4 border-main">
 				<div class="rounded-full overflow-hidden">
-					<img src="https://picsum.photos/500/500" class="m-auto" />
+					<img  class="m-auto" :src="person" :alt="'個人照片'" />
+					<!-- <img src="https://picsum.photos/500/500" class="m-auto" /> -->
 				</div>
 			</div>
 		</div>
@@ -26,7 +27,6 @@
 				</div>
 			</div>
 		</div>
-
 		<div class="flex justify-center gap-4 m-4">
 			<div>
 				<div>6Y+</div>
@@ -45,7 +45,7 @@
 			<div>
 				<div class="h-[50px] leading-10 p-3 bg-main shadow-md flex items-center rounded-md text-white">
 					<a href="https://drive.google.com/file/d/1gUtqkVXWQj49aH8mH9hLMTTGIkWxXJ2a/view?usp=drive_link" class="flex gap-3 items-center">
-						<p te>查看履歷</p>
+						<p>查看履歷</p>
 						<SvgIcon class="cursor-pointer text-white" :icon="'link'" :size="20"
 					/></a>
 				</div>
@@ -79,6 +79,7 @@ import Resume from '@/components/Resume.vue';
 import Portfolio from '@/components/Portfolio.vue';
 import Skill from '@/components/Skill.vue';
 import SvgIcon from '@/components/SvgIcon.vue';
+import person from '@/assets/img/personal.jpg';
 import { ref } from 'vue';
 const key = ref('resume');
 </script>
