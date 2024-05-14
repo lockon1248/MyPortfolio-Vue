@@ -3,8 +3,7 @@
 		<div class="w-[136px] m-auto">
 			<div class="m-auto rounded-full overflow-hidden p-1 border-4 border-main">
 				<div class="rounded-full overflow-hidden">
-					<img  class="m-auto" :src="person" :alt="'個人照片'" />
-					<!-- <img src="https://picsum.photos/500/500" class="m-auto" /> -->
+					<img class="m-auto" :src="person" :alt="'個人照片'" />
 				</div>
 			</div>
 		</div>
@@ -60,9 +59,27 @@
 			<div>
 				<nav class="inline-block">
 					<ul class="flex p-1 my-10 bg-slate-200 rounded cursor-pointer shadow-md flex-wrap">
-						<li @click="key = 'resume'" class="px-10 py-3 rounded-md flex-grow" :class="key === 'resume' ? ' bg-main shadow-2xl text-white' : 'bg-slate-200'">經歷</li>
-						<li @click="key = 'portfolio'" class="px-10 py-3 rounded-md flex-grow" :class="key === 'portfolio' ? 'bg-main shadow-2xl text-white' : 'bg-slate-200'">作品集</li>
-						<li @click="key = 'skill'" class="px-10 py-3 rounded-md flex-grow" :class="key === 'skill' ? 'bg-main shadow-2xl text-white' : 'bg-slate-200'">技能</li>
+						<li
+							@click="key = 'resume'"
+							class="px-10 py-3 rounded-md flex-grow transition duration-300 ease-in-out"
+							:class="{ 'bg-main shadow-2xl text-white': key === 'resume', 'bg-slate-200': key !== 'resume' }"
+						>
+							經歷
+						</li>
+						<li
+							@click="key = 'portfolio'"
+							class="px-10 py-3 rounded-md flex-grow transition duration-300 ease-in-out"
+							:class="{ 'bg-main shadow-2xl text-white': key === 'portfolio', 'bg-slate-200': key !== 'portfolio' }"
+						>
+							作品集
+						</li>
+						<li
+							@click="key = 'skill'"
+							class="px-10 py-3 rounded-md flex-grow transition duration-300 ease-in-out"
+							:class="{ 'bg-main shadow-2xl text-white': key === 'skill', 'bg-slate-200': key !== 'skill' }"
+						>
+							技能
+						</li>
 					</ul>
 				</nav>
 			</div>

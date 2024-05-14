@@ -1,8 +1,8 @@
 <template>
 	<div class="flex justify-center gap-20 flex-wrap">
 		<div>
-			<div class="flex items-center gap-3 justify-center mb-3">
-				<SvgIcon class="cursor-pointer" :icon="'school'" :size="20" />
+			<div class="flex items-center gap-3 justify-center mb-5">
+				<SvgIcon :icon="'school'" :size="20" />
 				<p>求學經歷</p>
 			</div>
 			<div class="flex gap-2" v-for="item in studyData" :key="item">
@@ -11,15 +11,15 @@
 					<div class="line"></div>
 				</div>
 				<div class="text-start">
-					<p class="mb-4 text-main font-black">{{ item.title }}</p>
+					<p class="mb-4 text-main font-black leading-[0.8]">{{ item.title }}</p>
 					<p class="text-main font-black">{{ item.school }}</p>
 					<p class="text-second">{{ item.startDate }}~{{ item.endDate }}</p>
 				</div>
 			</div>
 		</div>
 		<div>
-			<div class="flex items-center gap-3 justify-center mb-3">
-				<SvgIcon class="cursor-pointer" :icon="'tools'" :size="20" />
+			<div class="flex items-center gap-3 justify-center mb-5">
+				<SvgIcon :icon="'tools'" :size="20" />
 				<p>工作經歷</p>
 			</div>
 			<div class="flex gap-2" v-for="item in workData" :key="item">
@@ -28,7 +28,7 @@
 					<div class="line"></div>
 				</div>
 				<div class="text-start">
-					<p class="mb-4 text-main font-black">{{ item.title }}</p>
+					<p class="mb-4 text-main font-black leading-[0.8]">{{ item.title }}</p>
 					<p class="text-main font-black">{{ item.place }}</p>
 					<p class="text-second">{{ item.startDate }}~{{ item.endDate }}</p>
 				</div>
@@ -56,8 +56,8 @@ const studyData = ref([
 ]);
 const workData = ref([
 	{
-		title: '前端工程師養成班',
-		place: '緯育 TibaMe（前中壢資策會）',
+		title: '前端工程師',
+		place: '華苓科技股份有限公司',
 		startDate: '2023-10',
 		endDate: '現職'
 	},
