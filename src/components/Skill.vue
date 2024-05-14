@@ -26,13 +26,11 @@
 		</div>
 	</div>
 </template>
-
 <script setup>
 import { ref } from 'vue';
 import SvgIcon from '@/components/SvgIcon.vue';
-const frontEndData = ref(['HTML', 'CSS, SCSS', 'JavaScript', 'Tailwind CSS', 'Github', 'RWD', 'Axios', 'Bootstrap 5', 'Vue 3']);
+const frontEndData = ref(['HTML', 'CSS, SCSS', 'JavaScript', 'jQuery', 'Tailwind CSS', 'Github', 'RWD', 'Axios', 'Bootstrap 5', 'Vue 3']);
 const backEndData = ref(['MySQL', 'PHP']);
 const uiData = ref(['Figma', 'Wireframe', 'Prototype', 'Mockup']);
 </script>
-
 <style></style>

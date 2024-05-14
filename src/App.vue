@@ -97,7 +97,10 @@ import Portfolio from '@/components/Portfolio.vue';
 import Skill from '@/components/Skill.vue';
 import SvgIcon from '@/components/SvgIcon.vue';
 import person from '@/assets/img/personal.jpg';
-import { ref } from 'vue';
+import { ref, onMounted } from 'vue';
 const key = ref('resume');
+onMounted(() => {
+	document.title = 'My Portfolio'; // 设置文档标题
+});
 </script>
 <style scoped></style>
