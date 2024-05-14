@@ -3,12 +3,12 @@
 		<div class="w-[136px] m-auto">
 			<div class="m-auto rounded-full overflow-hidden p-1 border-4 border-main">
 				<div class="rounded-full overflow-hidden">
-					<img class="m-auto" :src="person" :alt="'個人照片'" />
+					<img class="m-auto align-bottom" :src="person" :alt="'個人照片'" />
 				</div>
 			</div>
 		</div>
 		<div class="flex flex-col gap-[15px] mt-[39px]">
-			<div class="text-center text-3xl font-black">賴世原 Tim</div>
+			<div class="text-center text-3xl font-black text-forth">賴世原 Tim</div>
 			<div class="text-center font-black">前端工程師 Frontend Developer</div>
 			<div class="flex justify-center gap-4">
 				<div>
@@ -27,17 +27,9 @@
 			</div>
 		</div>
 		<div class="flex justify-center gap-4 m-4">
-			<div>
-				<div>6Y+</div>
-				<div>工作經驗</div>
-			</div>
-			<div>
-				<div>6+</div>
-				<div>專案</div>
-			</div>
-			<div>
-				<div>30Y</div>
-				<div>年紀</div>
+			<div class="w-[75px]" v-for="item in personalData" :key="item">
+				<div>{{ item.content }}</div>
+				<div class="text-forth font-black">{{ item.title }}</div>
 			</div>
 		</div>
 		<div class="flex justify-center gap-4">
@@ -102,5 +94,10 @@ const key = ref('resume');
 onMounted(() => {
 	document.title = 'My Portfolio'; // 设置文档标题
 });
+const personalData = ref([
+	{ title: '工作經驗', content: '6Y+' },
+	{ title: '專案', content: '6+' },
+	{ title: '年紀', content: '30+' }
+]);
 </script>
 <style scoped></style>

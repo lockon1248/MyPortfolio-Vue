@@ -2,7 +2,7 @@
 	<div class="flex flex-col gap-6">
 		<div v-for="item in portfolioData" :key="item.title" class="grid-item">
 			<div class="grid grid-cols-2 gap-6 items-center changeLayout">
-				<div class="rounded overflow-hidden">
+				<div class="rounded overflow-hidden align-bottom">
 					<img :src="item.img" />
 				</div>
 				<div class="flex flex-col gap-2 text-start">

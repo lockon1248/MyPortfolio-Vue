@@ -6,7 +6,7 @@
 				<p>求學經歷</p>
 			</div>
 			<div class="flex gap-2" v-for="item in studyData" :key="item">
-				<div class="flex items-center flex-col text-main">
+				<div class="flex items-center flex-col text-forth">
 					<div class="dot"></div>
 					<div class="line"></div>
 				</div>
@@ -23,7 +23,7 @@
 				<p>工作經歷</p>
 			</div>
 			<div class="flex gap-2" v-for="item in workData" :key="item">
-				<div class="flex items-center flex-col text-main">
+				<div class="flex items-center flex-col text-forth">
 					<div class="dot"></div>
 					<div class="line"></div>
 				</div>
@@ -75,11 +75,11 @@ const workData = ref([
 	width: 10px;
 	height: 10px;
 	border-radius: 50%;
-	background-color: black;
+	background-color: #4f4f4f;
 }
 .line {
 	width: 2px;
 	height: 100px;
-	background-color: black;
+	background-color: #4f4f4f;
 }
 </style>
