@@ -57,22 +57,31 @@
 					<ul class="flex p-1 my-10 bg-slate-200 rounded cursor-pointer shadow-md flex-wrap dark:bg-darkThird">
 						<li
 							@click="key = 'resume'"
-							class="px-10 py-3 rounded-md flex-grow transition duration-300 ease-in-out dark:text-darkPrimary"
-							:class="{ 'bg-primary shadow-2xl text-white dark:bg-darkPrimary dark:text-black': key === 'resume', 'bg-slate-200 ': key !== 'resume' }"
+							class="px-10 py-3 rounded-md flex-grow transition duration-300 ease-in-out"
+							:class="{
+								'bg-primary shadow-2xl text-white dark:bg-darkPrimary dark:text-black': key === 'resume',
+								'bg-slate-200 dark:bg-darkThird dark:text-darkPrimary': key !== 'resume'
+							}"
 						>
 							經歷
 						</li>
 						<li
 							@click="key = 'portfolio'"
-							class="px-10 py-3 rounded-md flex-grow transition duration-300 ease-in-out dark:text-darkPrimary"
-							:class="{ 'bg-primary shadow-2xl text-white dark:bg-darkPrimary dark:text-black': key === 'portfolio', 'bg-slate-200 dark:bg-darkThird': key !== 'portfolio' }"
+							class="px-10 py-3 rounded-md flex-grow transition duration-300 ease-in-out"
+							:class="{
+								'bg-primary shadow-2xl text-white dark:bg-darkPrimary dark:text-black': key === 'portfolio',
+								'bg-slate-200 dark:bg-darkThird dark:text-darkPrimary': key !== 'portfolio'
+							}"
 						>
 							作品集
 						</li>
 						<li
 							@click="key = 'skill'"
-							class="px-10 py-3 rounded-md flex-grow transition duration-300 ease-in-out dark:text-darkPrimary"
-							:class="{ 'bg-primary shadow-2xl text-white dark:bg-darkPrimary dark:text-black': key === 'skill', 'bg-slate-200 dark:bg-darkThird': key !== 'skill' }"
+							class="px-10 py-3 rounded-md flex-grow transition duration-300 ease-in-out"
+							:class="{
+								'bg-primary shadow-2xl text-white dark:bg-darkPrimary dark:text-black': key === 'skill',
+								'bg-slate-200 dark:bg-darkThird dark:text-darkPrimary': key !== 'skill'
+							}"
 						>
 							技能
 						</li>
