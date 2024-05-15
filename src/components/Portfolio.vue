@@ -6,22 +6,22 @@
 					<img :src="item.img" />
 				</div>
 				<div class="flex flex-col gap-2 text-start">
-					<div class="text-main font-black">{{ item.type }}</div>
-					<div class="font-black text-xl">{{ item.title }}</div>
-					<div class="flex-grow">
+					<div class="text-primary font-black dark:text-darkPrimary">{{ item.type }}</div>
+					<div class="font-black text-xl dark:text-darkThird">{{ item.title }}</div>
+					<div class="flex-grow dark:text-darkThird">
 						{{ item.describe }}
 					</div>
 					<div class="flex gap-4 justify-end">
 						<a :href="item.git">
-							<button class="border-[1px] bg-main text-white p-1 flex items-center gap-2 py-3 px-3 rounded-md font-black">
+							<button class="border-[1px] bg-primary dark:bg-darkPrimary text-white dark:text-darkThird p-1 flex items-center gap-2 py-3 px-3 rounded-md font-black">
 								git hub
-								<SvgIcon class="cursor-pointer text-white" :icon="'github'" :size="24" />
+								<SvgIcon class="cursor-pointer text-white dark:text-darkThird" :icon="'github'" :size="24" />
 							</button>
 						</a>
 						<a :href="item.demo">
-							<button class="border-[1px] bg-main text-white p-1 flex items-center gap-2 py-3 px-3 rounded-md font-black">
+							<button class="border-[1px] bg-primary dark:bg-darkPrimary text-white dark:text-darkThird p-1 flex items-center gap-2 py-3 px-3 rounded-md font-black">
 								demo
-								<SvgIcon class="cursor-pointer text-white" :icon="'link'" :size="24" />
+								<SvgIcon class="cursor-pointer text-white dark:text-darkThird" :icon="'link'" :size="24" />
 							</button>
 						</a>
 					</div>

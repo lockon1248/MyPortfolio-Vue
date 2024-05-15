@@ -2,35 +2,35 @@
 	<div class="flex justify-center gap-20 flex-wrap">
 		<div>
 			<div class="flex items-center gap-3 justify-center mb-5">
-				<SvgIcon :icon="'school'" :size="20" />
-				<p>求學經歷</p>
+				<SvgIcon class="dark:text-darkThird" :icon="'school'" :size="20" />
+				<p class="dark:text-darkThird">求學經歷</p>
 			</div>
 			<div class="flex gap-2" v-for="item in studyData" :key="item">
-				<div class="flex items-center flex-col text-forth">
-					<div class="dot"></div>
-					<div class="line"></div>
+				<div class="flex items-center flex-col text-forth dark:text-darkPrimary">
+					<div class="dot bg-forth dark:bg-darkThird"></div>
+					<div class="line bg-forth dark:bg-darkThird"></div>
 				</div>
 				<div class="text-start">
-					<p class="mb-4 text-main font-black leading-[0.8]">{{ item.title }}</p>
-					<p class="text-main font-black">{{ item.school }}</p>
-					<p class="text-second">{{ item.startDate }}~{{ item.endDate }}</p>
+					<p class="mb-4 text-main font-black leading-[0.8] dark:text-darkPrimary">{{ item.title }}</p>
+					<p class="text-main font-black dark:text-darkPrimary">{{ item.school }}</p>
+					<p class="text-secondary dark:text-darkSecondary">{{ item.startDate }}~{{ item.endDate }}</p>
 				</div>
 			</div>
 		</div>
 		<div>
 			<div class="flex items-center gap-3 justify-center mb-5">
-				<SvgIcon :icon="'tools'" :size="20" />
-				<p>工作經歷</p>
+				<SvgIcon class="dark:text-darkThird" :icon="'tools'" :size="20" />
+				<p class="dark:text-darkThird">工作經歷</p>
 			</div>
 			<div class="flex gap-2" v-for="item in workData" :key="item">
-				<div class="flex items-center flex-col text-forth">
-					<div class="dot"></div>
-					<div class="line"></div>
+				<div class="flex items-center flex-col text-forth dark:text-darkPrimary">
+					<div class="dot bg-forth dark:bg-darkThird"></div>
+					<div class="line bg-forth dark:bg-darkThird"></div>
 				</div>
 				<div class="text-start">
-					<p class="mb-4 text-main font-black leading-[0.8]">{{ item.title }}</p>
-					<p class="text-main font-black">{{ item.place }}</p>
-					<p class="text-second">{{ item.startDate }}~{{ item.endDate }}</p>
+					<p class="mb-4 text-main font-black leading-[0.8] dark:text-darkPrimary">{{ item.title }}</p>
+					<p class="text-main font-black dark:text-darkPrimary">{{ item.place }}</p>
+					<p class="text-secondary dark:text-darkSecondary">{{ item.startDate }}~{{ item.endDate }}</p>
 				</div>
 			</div>
 		</div>
@@ -75,11 +75,9 @@ const workData = ref([
 	width: 10px;
 	height: 10px;
 	border-radius: 50%;
-	background-color: #4f4f4f;
 }
 .line {
 	width: 2px;
 	height: 100px;
-	background-color: #4f4f4f;
 }
 </style>

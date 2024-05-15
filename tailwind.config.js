@@ -1,14 +1,18 @@
 /** @type {import('tailwindcss').Config} */
 export default {
+	darkMode: 'selector',
 	content: ['./index.html', './src/**/*.{vue,js,ts,jsx,tsx}'],
 	theme: {
 		extend: {
 			colors: {
-				main: '#3A5267',
-				second: '#A9B2CA',
+				primary: '#3A5267',
+				secondary: '#A9B2CA',
 				third: '#BEBEBE',
-				forth: '#4F4F4F'
-			}
+				forth: '#4F4F4F',
+				darkPrimary: '#C4EEFC', // 修正了暗模式主色的值
+				darkSecondary: '#62808A',
+				darkThird: '#989898'
+			},
 		}
 	},
 	plugins: []
