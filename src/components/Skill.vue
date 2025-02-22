@@ -1,5 +1,5 @@
 <template>
-	<div class="flex gap-12 justify-evenly pt-3">
+	<div class="flex gap-12 justify-evenly pt-3 flex-wrap">
 		<div>
 			<div class="font-black my-3 dark:text-darkPrimary">使用者介面設計</div>
 			<div class="h-[200px] flex flex-col flex-wrap">
