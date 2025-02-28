@@ -37,6 +37,7 @@ import SvgIcon from '@/components/SvgIcon.vue';
 import flyBird from '@/assets/img/portfolio/flyBird.png';
 import spark from '@/assets/img/portfolio/spark.png';
 import todoList from '@/assets/img/portfolio/todoList.png';
+import astroPersonal from '@/assets/img/portfolio/astroPersonal.png';
 const portfolioData = ref([
 	{
 		title: '飛鳥時攝',
@@ -63,6 +64,14 @@ const portfolioData = ref([
 		img: todoList,
 		git: 'https://github.com/lockon1248/ToDoList',
 		demo: 'https://to-do-list-gules-delta.vercel.app/'
+	},
+	{
+		title: '個人部落格demo(astro試做)',
+		type: 'WEB',
+		describe: '這是一個純前端的個人部落格試做品，使用 astro 前端框架製作',
+		img: astroPersonal,
+		git: 'https://github.com/lockon1248/personal-blog',
+		demo: 'https://personal-blog-beige-mu.vercel.app/'
 	}
 ]);
 </script>
