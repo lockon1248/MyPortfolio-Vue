@@ -8,9 +8,7 @@
 				<div class="flex flex-col gap-2 text-start">
 					<div class="text-primary font-black dark:text-darkPrimary">{{ item.type }}</div>
 					<div class="font-black text-xl dark:text-darkThird">{{ item.title }}</div>
-					<div class="flex-grow dark:text-darkThird">
-						{{ item.describe }}
-					</div>
+					<div class="flex-grow dark:text-darkThird">{{ item.describe }}</div>
 					<div class="flex gap-4 justify-end">
 						<a :href="item.git">
 							<button class="border-[1px] bg-primary dark:bg-darkPrimary text-white dark:text-darkThird p-1 flex items-center gap-2 py-3 px-3 rounded-md font-black">

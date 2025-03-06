@@ -37,13 +37,11 @@
 			</div>
 		</div>
 		<div class="flex justify-center gap-4">
-			<div>
-				<div class="h-[50px] leading-10 p-3 bg-primary dark:bg-darkPrimary shadow-md flex items-center rounded-md text-white dark:text-black">
-					<a href="https://drive.google.com/file/d/1gUtqkVXWQj49aH8mH9hLMTTGIkWxXJ2a/view?usp=drive_link" class="flex gap-3 items-center">
-						<p>查看履歷</p>
-						<SvgIcon class="cursor-pointer text-white dark:text-black" :icon="'link'" :size="20"
-					/></a>
-				</div>
+			<div class="h-[50px] leading-10 p-3 bg-primary dark:bg-darkPrimary shadow-md flex items-center rounded-md text-white dark:text-black">
+				<a href="https://drive.google.com/file/d/1gUtqkVXWQj49aH8mH9hLMTTGIkWxXJ2a/view?usp=drive_link" class="flex gap-3 items-center">
+					<p>查看履歷</p>
+					<SvgIcon class="cursor-pointer text-white dark:text-black" :icon="'link'" :size="20"
+				/></a>
 			</div>
 			<div class="h-[50px] border-2 leading-10 flex items-center p-4 border-primary rounded-md dark:border-darkPrimary">
 				<a href="tel:+886-9-75556202">
@@ -52,47 +50,45 @@
 			</div>
 		</div>
 		<div>
-			<div>
-				<nav class="inline-block">
-					<ul class="flex p-1 my-10 bg-slate-200 rounded cursor-pointer shadow-md flex-wrap dark:bg-darkThird">
-						<li
-							@click="key = 'resume'"
-							class="px-10 py-3 rounded-md flex-grow transition duration-300 ease-in-out"
-							:class="{
-								'bg-primary shadow-2xl text-white dark:bg-darkPrimary dark:text-black': key === 'resume',
-								'bg-slate-200 dark:bg-darkThird dark:text-darkPrimary': key !== 'resume'
-							}"
-						>
-							經歷
-						</li>
-						<li
-							@click="key = 'portfolio'"
-							class="px-10 py-3 rounded-md flex-grow transition duration-300 ease-in-out"
-							:class="{
-								'bg-primary shadow-2xl text-white dark:bg-darkPrimary dark:text-black': key === 'portfolio',
-								'bg-slate-200 dark:bg-darkThird dark:text-darkPrimary': key !== 'portfolio'
-							}"
-						>
-							作品集
-						</li>
-						<li
-							@click="key = 'skill'"
-							class="px-10 py-3 rounded-md flex-grow transition duration-300 ease-in-out"
-							:class="{
-								'bg-primary shadow-2xl text-white dark:bg-darkPrimary dark:text-black': key === 'skill',
-								'bg-slate-200 dark:bg-darkThird dark:text-darkPrimary': key !== 'skill'
-							}"
-						>
-							技能
-						</li>
-					</ul>
-				</nav>
-			</div>
+			<nav class="inline-block">
+				<ul class="flex p-1 my-10 bg-slate-200 rounded cursor-pointer shadow-md flex-wrap dark:bg-darkThird">
+					<li
+						@click="key = 'resume'"
+						class="px-10 py-3 rounded-md flex-grow transition duration-300 ease-in-out"
+						:class="{
+							'bg-primary shadow-2xl text-white dark:bg-darkPrimary dark:text-black': key === 'resume',
+							'bg-slate-200 dark:bg-darkThird dark:text-darkPrimary': key !== 'resume'
+						}"
+					>
+						經歷
+					</li>
+					<li
+						@click="key = 'portfolio'"
+						class="px-10 py-3 rounded-md flex-grow transition duration-300 ease-in-out"
+						:class="{
+							'bg-primary shadow-2xl text-white dark:bg-darkPrimary dark:text-black': key === 'portfolio',
+							'bg-slate-200 dark:bg-darkThird dark:text-darkPrimary': key !== 'portfolio'
+						}"
+					>
+						作品集
+					</li>
+					<li
+						@click="key = 'skill'"
+						class="px-10 py-3 rounded-md flex-grow transition duration-300 ease-in-out"
+						:class="{
+							'bg-primary shadow-2xl text-white dark:bg-darkPrimary dark:text-black': key === 'skill',
+							'bg-slate-200 dark:bg-darkThird dark:text-darkPrimary': key !== 'skill'
+						}"
+					>
+						技能
+					</li>
+				</ul>
+			</nav>
 		</div>
 		<div class="mx-auto">
-			<div v-if="key === 'resume'"><Resume /></div>
-			<div v-if="key === 'portfolio'"><Portfolio /></div>
-			<div v-if="key === 'skill'"><Skill /></div>
+			<template v-if="key === 'resume'"><Resume /></template>
+			<template v-if="key === 'portfolio'"><Portfolio /></template>
+			<template v-if="key === 'skill'"><Skill /></template>
 		</div>
 	</div>
 </template>
